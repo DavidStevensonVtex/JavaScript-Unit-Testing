@@ -1,6 +1,7 @@
+const reverseString = require('./reverseString');
+
 function isPalindrome(word) {
-    return word.toLowerCase() == word.toLowerCase().split('')
-        .reverse().join('').replaceAll(',', '');
+    return word.toLowerCase() == reverseString(word).toLowerCase();
 }
 
 module.exports = isPalindrome ;
