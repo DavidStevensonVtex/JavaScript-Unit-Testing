@@ -20,20 +20,8 @@ function fetchData() {
         }, 300);
     });
 
-    return myPromise.then(function (data) {
-        // console.log("myPromise", "data", data);
-        return data;
-    },
-    function () {
-        throw new Error("An error happened");
-    });
+    return myPromise ;
 }
-
-// fetchData().then(data => {
-//     console.log("data", data);
-//     // expect(data).toBe('peanut butter');
-// });
-
 
 test('the data is peanut butter', () => {
     return fetchData().then(data => {
