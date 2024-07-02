@@ -11,7 +11,7 @@
 function fetchData(callback) {
     setTimeout(() => {
         callback(false, "incorrect result");
-    }, 5000);
+    }, 1500);
 }
 
 test('the data is peanut butter', () => {
