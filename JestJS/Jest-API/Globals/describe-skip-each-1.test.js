@@ -4,10 +4,6 @@
 
 // Use describe.skip.each if you want to stop running a suite of data driven tests.
 
-// Using describe.skip is often a cleaner alternative to temporarily commenting out a chunk of tests. 
-// Beware that the describe block will still run. If you have some setup that also should be skipped, 
-// do it in a beforeAll or beforeEach block.
-
 // describe.skip.each is available with two APIs:
 
 // describe.skip.each(table)(name, fn)
