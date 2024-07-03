@@ -6,14 +6,15 @@
 
 // describe.skip.each is available with two APIs:
 
-// describe.skip.each(table)(name, fn)
+// describe.skip.each`table`(name, fn)
 
-describe.skip.each([
-    [1, 1, 2],
-    [1, 2, 3],
-    [2, 1, 3],
-])('.add(%i, %i)', (a, b, expected) => {
-    test(`returns ${expected}`, () => {
+describe.skip.each`
+  a    | b    | expected
+  ${1} | ${1} | ${2}
+  ${1} | ${2} | ${3}
+  ${2} | ${1} | ${3}
+`('returns $expected when $a is added to $b', ({ a, b, expected }) => {
+    test('will not be run', () => {
         expect(a + b).toBe(expected); // will not be run
     });
 });
