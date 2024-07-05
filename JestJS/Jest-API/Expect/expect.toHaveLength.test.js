@@ -11,8 +11,8 @@ test('.toHaveLength(number)', () => {
     expect('').not.toHaveLength(5);
 });
 
-PASS  ./expect.toHaveLength.test.js
-√ .toHaveLength(number) (2 ms)
+// PASS  ./expect.toHaveLength.test.js
+// √ .toHaveLength(number) (2 ms)
 
-Test Suites: 1 passed, 1 total
-Tests:       1 passed, 1 total
+// Test Suites: 1 passed, 1 total
+// Tests:       1 passed, 1 total
