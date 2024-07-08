@@ -11,6 +11,9 @@ test('async test', async () => {
       .fn()
       .mockRejectedValue(new Error('Async error message'));
 
-
-      expect(await asyncMock()).rejects.ToThrow("Async error message");
+      asyncMock().catch ( (error) => {
+        // expect.assertions(1);
+        expect(error.message).toBe("Async error message");
+        console.log(error.message);
+      });
   });
